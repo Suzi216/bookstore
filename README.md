@@ -2,7 +2,7 @@
 
 # BOOKSTORE
 
->The Bookstore is a website similar to the "Awesome Books" website built in the previous project that display a list of your books. The used can perform some actions like add, select or remove books from list.
+>The Bookstore is a website similar to the "Awesome Books" website built in the previous project that display a list of your books. The user can perform some actions like add, select or remove books from list.
 
 ## Built With
 
