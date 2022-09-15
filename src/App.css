@@ -1,12 +1,14 @@
-.navBar{
+.navBar {
   list-style: none;
   display: flex;
   grid-gap: 3%;
 }
-.form-container{
+
+.form-container {
   display: flex;
   grid-gap: 3%;
 }
-.book-container{
+
+.book-container {
   border: solid 1px;
 }

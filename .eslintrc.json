@@ -21,6 +21,8 @@
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "linebreak-style":0,
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off",
     "no-shadow": "off"
   },
   "ignorePatterns": [
