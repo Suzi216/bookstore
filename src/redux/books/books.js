@@ -1,7 +1,8 @@
 // Action Types
+// import { uuid } from 'uuidv4';
+
 const BOOK_ADDED = 'books/BOOK_ADDED';
 const BOOK_REMOVED = 'books/BOOK_REMOVED';
-
 // addBook actions creator
 export const addBook = (payload) => ({
   type: BOOK_ADDED,
@@ -15,7 +16,23 @@ export const removeBook = (payload) => ({
 });
 
 // declare the initial state
-const initialState = [];
+// const initialState = {
+//   id: '0',
+//   title: 'The hunger game',
+//   author: 'Suzanna Collins',
+// };
+const initialState = [
+  {
+    id: '0',
+    title: 'The hunger game',
+    author: 'Suzanna Collins',
+  },
+  {
+    id: '1',
+    title: 'The hunger game',
+    author: 'Suzanna Collins',
+  },
+];
 
 // the reducer function for the books
 const booksReducer = (state = initialState, { type, payload }) => {

@@ -7,7 +7,11 @@ export const checkStatus = () => ({
 });
 
 // declare the initial state
-const initialState = [];
+const initialState = {
+  id: '0',
+  title: 'The hunger game',
+  author: 'Suzanna Collins',
+};
 
 // the reducer function for the books
 const categoriesReducer = (state = initialState, type) => {
