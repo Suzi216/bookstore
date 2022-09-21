@@ -4,10 +4,12 @@
 const BOOK_ADDED = 'books/BOOK_ADDED';
 const BOOK_REMOVED = 'books/BOOK_REMOVED';
 // addBook actions creator
-export const addBook = (payload) => ({
-  type: BOOK_ADDED,
-  payload,
-});
+export const addBook = (values) => (dispatch) => {
+  dispatch({
+    type: BOOK_ADDED,
+    payload: values,
+  });
+};
 
 // removeBook action creator
 export const removeBook = (payload) => ({
@@ -15,12 +17,6 @@ export const removeBook = (payload) => ({
   payload,
 });
 
-// declare the initial state
-// const initialState = {
-//   id: '0',
-//   title: 'The hunger game',
-//   author: 'Suzanna Collins',
-// };
 const initialState = [
   {
     id: '0',
