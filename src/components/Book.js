@@ -5,6 +5,7 @@ const BOOK_REMOVED = 'books/BOOK_REMOVED';
 
 const Book = (props) => {
   const dispatch = useDispatch();
+
   const clickHandler = (e) => {
     const ids = e.target;
     console.log(ids);
@@ -14,12 +15,14 @@ const Book = (props) => {
     });
   };
 
-  const { id, title, author } = props;
+  const {
+    id, remove, title, author,
+  } = props;
   return (
     <div className="book-container">
       <h4>{title}</h4>
       <h6>{author}</h6>
-      <input onClick={clickHandler} id={id} type="button" value="Remove" />
+      <input onClick={clickHandler} id={id} type="button" value={remove} />
     </div>
   );
 };

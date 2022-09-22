@@ -14,6 +14,7 @@ const Books = () => {
           key={book.id}
           title={book.title}
           author={book.author}
+          remove="Remove"
           id={book.id}
         />
       ))}

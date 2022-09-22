@@ -7,17 +7,13 @@ export const checkStatus = () => ({
 });
 
 // declare the initial state
-const initialState = {
-  id: '0',
-  title: 'The hunger game',
-  author: 'Suzanna Collins',
-};
+const initialState = 'No books';
 
 // the reducer function for the books
 const categoriesReducer = (state = initialState, type) => {
   switch (type) {
     case CHECK_STATUS:
-      return 'Being created';
+      return 'Many books added';
     default:
       return state;
   }
