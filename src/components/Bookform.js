@@ -27,13 +27,16 @@ const Bookform = () => {
     dispatch(addBook(newBook));
     setState({ title: '', author: '' });
   };
+  const myFunction = () => {
+    document.getElementById('myForm').reset();
+  };
   return (
     <>
       <h4> ADD NEW BOOK</h4>
-      <form onSubmit={clickHandler} className="form-container">
+      <form onSubmit={clickHandler} id="myForm" className="form-container">
         <input onChange={inputHandler} type="text" name="title" placeholder="Book title" />
         <input onChange={inputHandler} type="text" name="author" placeholder="Author" />
-        <input type="submit" value="Add Book" />
+        <input type="submit" onClick={myFunction} value="Add Book" />
       </form>
     </>
   );
