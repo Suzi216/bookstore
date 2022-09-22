@@ -3,11 +3,8 @@ import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/books';
 
-// const BOOK_ADDED = 'books/BOOK_ADDED';
-
 const Bookform = () => {
   const [value, setState] = useState({
-    id: uuidv4(),
     title: '',
     author: '',
   });
@@ -23,7 +20,12 @@ const Bookform = () => {
 
   const clickHandler = (e) => {
     e.preventDefault();
-    dispatch(addBook(value));
+    const newBook = {
+      id: uuidv4(),
+      ...value,
+    };
+    dispatch(addBook(newBook));
+    setState({ title: '', author: '' });
   };
   return (
     <>

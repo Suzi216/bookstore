@@ -5,8 +5,6 @@ import Bookform from './Bookform';
 
 const Books = () => {
   const allbooks = useSelector((state) => state.book);
-
-  console.log(allbooks);
   return (
     <div className="">
       {allbooks.map((book) => (

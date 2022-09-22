@@ -1,27 +1,24 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { checkStatus } from '../redux/categories/categories';
 
-const CHECK_STATUS = 'books/CHECK_STATUS';
-
-const Categories = () => {
+const CategoriesReducer = () => {
   const dispatch = useDispatch();
-  const eventHandler = () => {
-    dispatch({
-      type: CHECK_STATUS,
-    });
+  const { categories } = useSelector((state) => state.categories);
+  const clickHandler = () => {
+    dispatch(checkStatus());
   };
-  const categories = useSelector((state) => state.categories);
-  console.log(categories);
   return (
-    <div className="status-button">
-      <button onClick={eventHandler} type="button">Status Check</button>
-      <p>
-        {' '}
-        {categories}
-        {' '}
-      </p>
-    </div>
+    <>
+      <button type="button" onClick={clickHandler}>
+        Check Status
+      </button>
+      {categories.map((el) => (
+        <p key={uuidv4()}>{el}</p>
+      ))}
+    </>
   );
 };
 
-export default Categories;
+export default CategoriesReducer;

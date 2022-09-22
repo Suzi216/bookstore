@@ -1,22 +1,30 @@
 // Action Types
-const CHECK_STATUS = 'books/CHECK_STATUS';
+export const STATUS_CHECK = '/books/CHECK_STATUS';
 
-// checkstatus actions creator
-export const checkStatus = () => ({
-  type: CHECK_STATUS,
-});
+// initial State
+const initialState = {
+  categories: [],
+};
 
-// declare the initial state
-const initialState = 'No books';
-
-// the reducer function for the books
-const categoriesReducer = (state = initialState, type) => {
+// Reducers
+const categoriesReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case CHECK_STATUS:
-      return 'Many books added';
+    case STATUS_CHECK:
+      return {
+        ...state,
+        categories: [...state.categories, payload],
+      };
     default:
       return state;
   }
+};
+
+// Actions
+export const checkStatus = () => (dispatch) => {
+  dispatch({
+    type: STATUS_CHECK,
+    payload: 'Adding Books',
+  });
 };
 
 export default categoriesReducer;

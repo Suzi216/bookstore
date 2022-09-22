@@ -8,7 +8,6 @@ const Book = (props) => {
 
   const clickHandler = (e) => {
     const ids = e.target;
-    console.log(ids);
     dispatch({
       type: BOOK_REMOVED,
       payload: ids,
