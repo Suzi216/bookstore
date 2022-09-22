@@ -1,15 +1,21 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 import Bookform from './Bookform';
 
 const Books = () => {
-  const allbooks = {
-    id: '0',
-    title: 'The hunger game',
-    author: 'Suzanna Collins',
-  };
+  const allbooks = useSelector((state) => state.book);
   return (
     <div className="">
+      {allbooks.map((book) => (
+        <Book
+          key={book.id}
+          title={book.title}
+          author={book.author}
+          remove="Remove"
+          id={book.id}
+        />
+      ))}
       <Book {...allbooks} />
       <Bookform />
     </div>

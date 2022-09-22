@@ -1,12 +1,13 @@
-// Action Types
 const BOOK_ADDED = 'books/BOOK_ADDED';
 const BOOK_REMOVED = 'books/BOOK_REMOVED';
 
 // addBook actions creator
-export const addBook = (payload) => ({
-  type: BOOK_ADDED,
-  payload,
-});
+export const addBook = (values) => (dispatch) => {
+  dispatch({
+    type: BOOK_ADDED,
+    payload: values,
+  });
+};
 
 // removeBook action creator
 export const removeBook = (payload) => ({
@@ -14,11 +15,10 @@ export const removeBook = (payload) => ({
   payload,
 });
 
-// declare the initial state
 const initialState = [];
 
 // the reducer function for the books
-const booksReducer = (state = initialState, { type, payload }) => {
+const BooksReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case BOOK_ADDED:
       return [...state, payload];
@@ -29,4 +29,4 @@ const booksReducer = (state = initialState, { type, payload }) => {
   }
 };
 
-export default booksReducer;
+export default BooksReducer;
