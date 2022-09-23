@@ -1,22 +1,20 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-
-const BOOK_REMOVED = 'books/BOOK_REMOVED';
+import { removeBook } from '../redux/books/books';
 
 const Book = (props) => {
   const dispatch = useDispatch();
 
   const clickHandler = (e) => {
-    const ids = e.target;
-    dispatch({
-      type: BOOK_REMOVED,
-      payload: ids,
-    });
+    const ids = e.target.id;
+    console.log(ids);
+    dispatch(removeBook(ids));
   };
 
   const {
     id, remove, title, author,
   } = props;
+
   return (
     <div className="book-container">
       <h4>{title}</h4>

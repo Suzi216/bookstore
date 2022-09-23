@@ -5,8 +5,10 @@ import { addBook } from '../redux/books/books';
 
 const Bookform = () => {
   const [value, setState] = useState({
+    item_id: uuidv4(),
     title: '',
     author: '',
+    category: 'Action',
   });
   const dispatch = useDispatch();
 
