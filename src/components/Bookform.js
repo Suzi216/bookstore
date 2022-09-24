@@ -23,11 +23,11 @@ const Bookform = () => {
   const clickHandler = (e) => {
     e.preventDefault();
     const newBook = {
-      id: uuidv4(),
+      item_id: uuidv4(),
       ...value,
     };
     dispatch(addBook(newBook));
-    setState({ title: '', author: '' });
+    setState({ title: '', author: '',category:'action' });
   };
   const myFunction = () => {
     document.getElementById('myForm').reset();

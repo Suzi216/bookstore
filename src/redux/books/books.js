@@ -6,7 +6,7 @@ const DISPLAY_BOOK = 'books/DISPLAY_BOOKS';
 const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/O3So5kDZkObZ1qi8d5xN/books';
 
 // addBook actions creator
-export const addBook = createAsyncThunk(BOOK_ADDED, async (book) => {
+export const addBook = createAsyncThunk(BOOK_ADDED, async (book, {dispatch}) => {
   await fetch(
     url,
     {
@@ -17,18 +17,18 @@ export const addBook = createAsyncThunk(BOOK_ADDED, async (book) => {
       },
     },
   );
-  return book;
+  dispatch(displayBooks());
 });
 
 // removeBook action creator
-export const removeBook = createAsyncThunk(BOOK_REMOVED, async (id) => {
+export const removeBook = createAsyncThunk(BOOK_REMOVED, async (id, {dispatch}) => {
   await fetch(
     `${url}/${id}`,
     {
       method: 'DELETE',
     },
   );
-  return id;
+  dispatch(displayBooks());
 });
 
 export const displayBooks = createAsyncThunk(DISPLAY_BOOK, async () => {
@@ -51,7 +51,7 @@ const BooksReducer = (state = initialState, { type, payload }) => {
     case BOOK_ADDED:
       return [...state, payload];
     case 'books/REMOVE_BOOK/fulfilled':
-      return (state.filter(({ id }) => id !== payload.id));
+      return (state.filter((item) => item !== payload.id));
     case 'books/DISPLAY_BOOKS/fulfilled':
       return payload;
     default:
