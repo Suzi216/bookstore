@@ -36,9 +36,9 @@ const Bookform = () => {
     <>
       <h4> ADD NEW BOOK</h4>
       <form onSubmit={clickHandler} id="myForm" className="form-container">
-        <input onChange={inputHandler} type="text" name="title" placeholder="Book title" />
-        <input onChange={inputHandler} type="text" name="author" placeholder="Author" />
-        <input type="submit" onClick={myFunction} value="Add Book" />
+        <input onChange={inputHandler} type="text" name="title" className="input1" placeholder="Book title" />
+        <input onChange={inputHandler} type="text" name="author" className="input2" placeholder="Author" />
+        <input type="submit" onClick={myFunction} className="addbook" value="Add Book" />
       </form>
     </>
   );
