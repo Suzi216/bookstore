@@ -32,13 +32,18 @@ li {
   margin: 1.125rem;
   opacity: 0.5;
   font-family: Montserrat, sans-serif;
-
-  /* font-size: 0.813rem 41.1rem; */
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: 1.9px;
+  color: #121212;
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
   color: #121212;
 }
 
@@ -59,10 +64,13 @@ li {
   width: 60rem;
   height: 7.625rem;
   margin: 2.313rem;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .category {
@@ -74,6 +82,7 @@ li {
 
 .author {
   padding-top: 0;
+  padding-bottom: 10px;
   margin: 0.25rem 0 0;
   font-family: RobotoSlab, sans-serif;
   font-size: 0.675rem;
@@ -159,4 +168,7 @@ form {
   background-color: #0290ff;
   border: none;
   outline: none;
+  color: white;
 }
+
+/* for book.js */
