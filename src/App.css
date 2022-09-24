@@ -1,11 +1,12 @@
-#root{
+#root {
   padding: 2% 5%;
 }
-.title{
+
+.title {
   width: 15rem;
   height: 2.313rem;
   margin: 0.375rem 2.938rem 0.125rem 0;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 1.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -14,34 +15,36 @@
   letter-spacing: normal;
   color: #0290ff;
 }
+
 .navBar {
   list-style: none;
   display: flex;
   grid-gap: 3%;
 }
-ul{
+
+ul {
   list-style: none;
 }
 
 li {
   width: 6.563rem;
   height: 1rem;
-  margin: 1.125rem ;
+  margin: 1.125rem;
   opacity: 0.5;
-  font-family: Montserrat;
-  font-size: 0.813rem 41.1rem;
+  font-family: Montserrat, sans-serif;
+
+  /* font-size: 0.813rem 41.1rem; */
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: 1.9px;
   color: #121212;
-
 }
 
-.navig-container{
+.navig-container {
   display: flex;
-  justify-content:flex-start;
+  justify-content: flex-start;
   align-items: center;
   align-content: center;
   padding-left: 4%;
@@ -61,27 +64,29 @@ li {
   border: solid 1px #e8e8e8;
   background-color: #fff;
 }
-.category{
+
+.category {
   background-color: #fff;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
 }
-.author{
+
+.author {
   padding-top: 0;
-  margin-top: 0;
   margin: 0.25rem 0 0;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   font-size: 0.675rem;
   color: #4386bf;
   opacity: 0.5;
 }
-.titles{
+
+.titles {
   padding-bottom: 0;
   width: 12.313rem;
   height: 1.813rem;
   margin: 0.188rem 20.188rem 0 0;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   font-size: 1.375rem;
   font-weight: bold;
   font-stretch: normal;
@@ -98,54 +103,59 @@ li {
   color: blue;
 }
 
-.remov{
+.remov {
   border: none;
   outline: none;
   background-color: white;
-  box-shadow : none;
+  box-shadow: none;
   margin-top: 2%;
   color: #4386bf;
   opacity: 0.5;
   padding: 0;
   padding-right: 2%;
 }
-h4{
+
+h4 {
   padding-left: 2.5rem;
   display: block;
   width: 10.875rem;
-   height: 1.5rem;
-   margin: 1.813rem 32.75rem 1.188rem 0;
-   font-family: Montserrat;
-   font-size: 1.25rem;
-   font-weight: bold;
-   font-stretch: normal;
-   font-style: normal;
-   line-height: normal;
-   letter-spacing: -0.18px;
-   color: #888;
+  height: 1.5rem;
+  margin: 1.813rem 32.75rem 1.188rem 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
 }
-form{
+
+form {
   padding-left: 2.5rem;
 }
-.input1{
+
+.input1 {
   height: 1rem;
-  width:38.5rem;
+  width: 38.5rem;
   padding: 1rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
 }
-.input2{
+
+.input2 {
   height: 1rem;
-  width:8.5rem;
+  width: 8.5rem;
   padding: 1rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
 }
-.addbook{
+
+.addbook {
   height: 2.5rem;
-  width:9.5rem;
+  width: 9.5rem;
   background-color: #0290ff;
   border: none;
   outline: none;
