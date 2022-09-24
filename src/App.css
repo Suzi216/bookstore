@@ -3,7 +3,7 @@
 }
 
 .title {
-  width: 15rem;
+  width: 14.5rem;
   height: 2.313rem;
   margin: 0.375rem 2.938rem 0.125rem 0;
   font-family: Montserrat, sans-serif;
@@ -138,28 +138,6 @@ h4 {
   line-height: normal;
   letter-spacing: -0.18px;
   color: #888;
-}
-
-form {
-  padding-left: 2.5rem;
-}
-
-.input1 {
-  height: 1rem;
-  width: 38.5rem;
-  padding: 1rem;
-  border-radius: 4px;
-  border: solid 1px #e8e8e8;
-  background-color: #fff;
-}
-
-.input2 {
-  height: 1rem;
-  width: 8.5rem;
-  padding: 1rem;
-  border-radius: 4px;
-  border: solid 1px #e8e8e8;
-  background-color: #fff;
 }
 
 .addbook {
