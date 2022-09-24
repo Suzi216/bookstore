@@ -27,7 +27,7 @@ const Bookform = () => {
       ...value,
     };
     dispatch(addBook(newBook));
-    setState({ title: '', author: '',category:'action' });
+    setState({ title: '', author: '', category: 'action' });
   };
   const myFunction = () => {
     document.getElementById('myForm').reset();

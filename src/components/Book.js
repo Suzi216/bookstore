@@ -7,7 +7,6 @@ const Book = (props) => {
 
   const clickHandler = (e) => {
     const ids = e.target.id;
-    console.log(ids);
     dispatch(removeBook(ids));
   };
 

@@ -5,8 +5,21 @@ const BOOK_REMOVED = 'books/REMOVE_BOOK';
 const DISPLAY_BOOK = 'books/DISPLAY_BOOKS';
 const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/O3So5kDZkObZ1qi8d5xN/books';
 
-// addBook actions creator
-export const addBook = createAsyncThunk(BOOK_ADDED, async (book, {dispatch}) => {
+// display Books
+export const displayBooks = createAsyncThunk(DISPLAY_BOOK, async () => {
+  const response = await fetch(
+    url,
+  );
+  const data = await response.json();
+  const books = Object.keys(data).map((key) => ({
+    ...data[key][0],
+    item_id: key,
+  }));
+  return books;
+});
+
+// addBook creator
+export const addBook = createAsyncThunk(BOOK_ADDED, async (book, { dispatch }) => {
   await fetch(
     url,
     {
@@ -20,8 +33,8 @@ export const addBook = createAsyncThunk(BOOK_ADDED, async (book, {dispatch}) => 
   dispatch(displayBooks());
 });
 
-// removeBook action creator
-export const removeBook = createAsyncThunk(BOOK_REMOVED, async (id, {dispatch}) => {
+// removeBook creator
+export const removeBook = createAsyncThunk(BOOK_REMOVED, async (id, { dispatch }) => {
   await fetch(
     `${url}/${id}`,
     {
@@ -29,18 +42,6 @@ export const removeBook = createAsyncThunk(BOOK_REMOVED, async (id, {dispatch}) 
     },
   );
   dispatch(displayBooks());
-});
-
-export const displayBooks = createAsyncThunk(DISPLAY_BOOK, async () => {
-  const response = await fetch(
-    url,
-  );
-  const data = await response.json();
-  const books = Object.keys(data).map((key) => ({
-    ...data[key][0],
-    item_id: key,
-  }));
-  return books;
 });
 
 const initialState = [];

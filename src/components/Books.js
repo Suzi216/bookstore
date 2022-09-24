@@ -7,7 +7,7 @@ import { displayBooks } from '../redux/books/books';
 const Books = () => {
   const allbooks = useSelector((state) => state.book);
   const dispatch = useDispatch();
-  console.log(allbooks);
+
   useEffect(() => {
     dispatch(displayBooks());
   }, []);
