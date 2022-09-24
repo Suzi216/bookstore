@@ -23,7 +23,6 @@ const Books = () => {
           id={book.item_id}
         />
       ))}
-      <Book {...allbooks} />
       <Bookform />
     </div>
   );
