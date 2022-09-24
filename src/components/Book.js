@@ -1,27 +1,31 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-
-const BOOK_REMOVED = 'books/BOOK_REMOVED';
+import { removeBook } from '../redux/books/books';
 
 const Book = (props) => {
   const dispatch = useDispatch();
 
   const clickHandler = (e) => {
-    const ids = e.target;
-    dispatch({
-      type: BOOK_REMOVED,
-      payload: ids,
-    });
+    const ids = e.target.id;
+    dispatch(removeBook(ids));
   };
 
   const {
     id, remove, title, author,
   } = props;
+
   return (
     <div className="book-container">
-      <h4>{title}</h4>
-      <h6>{author}</h6>
-      <input onClick={clickHandler} id={id} type="button" value={remove} />
+      <div>
+        <span className="category">Action</span>
+        <h2 className="titles">{title}</h2>
+        <h6 className="author">{author}</h6>
+        <input onClick={clickHandler} id={id} className="remov" type="button" value={remove} />
+        <input className="remov" type="button" value="Comments" />
+        <input className="remov" type="button" value="Edit" />
+        <div className="Rectangle3"> </div>
+      </div>
+
     </div>
   );
 };

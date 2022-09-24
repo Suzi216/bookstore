@@ -15,7 +15,8 @@ const Navig = () => {
     },
   ];
   return (
-    <nav>
+    <nav className="navig-container">
+      <span className="title">Bookstore CMS</span>
       <ul className="navBar">
         {links.map((link) => <li key={link.id}><NavLink to={link.path}>{link.text}</NavLink></li>)}
       </ul>
